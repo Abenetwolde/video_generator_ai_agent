@@ -1,0 +1,29 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Generated media outputs (keep directory structure via .gitkeep if desired)
+outputs/**
+!outputs/.gitkeep
+
+# Logs and temporary files
+*.log
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+*.tmp
+*.bak
+.DS_Store
+
+# Kaggle credentials if placed locally
+kaggle.json
+~/.kaggle/
+
+# Exported report binaries (keep report.md tracked)
+report/*.pdf
+report/*.docx
+

@@ -1,0 +1,459 @@
+{
+  "meta": {
+    "title": "Dir Biyabir (When Spiderwebs Unite)",
+    "proverb": "ድር ቢያብር አንበሳ ያስር",
+    "language": "am",
+    "narration_language": "am",
+    "subtitle_language": "en",
+    "audience": "Educated Ethiopian and diaspora viewers on mobile (9:16) and desktop (16:9)",
+    "intent": "To remind educated viewers that patient, ordinary daily threads—craft, hospitality, and community solidarity—hold the strength to overcome overwhelming challenges.",
+    "aspect_ratios": ["9:16", "16:9"],
+    "target_total_seconds": 74,
+    "fps": 24,
+    "loudness_target_lufs": -14,
+    "true_peak_db": -1
+  },
+  "style": {
+    "style_block": "35mm cinematic documentary realism, warm amber golden-hour light, subtle natural film grain, Ethiopian highland atmosphere, rich earth tones, handwoven white cotton textures, shallow depth of field, respectful authentic cultural detail",
+    "character_description": "Ato Bekele is a dignified fictional 68-year-old Ethiopian highland weaver with warm weathered hands, silver-flecked short beard, wearing a traditional cream cotton shemma shawl over a plain tunic. Selam is a fictional 11-year-old Ethiopian girl with neat braided hair and a handwoven cotton dress with subtle tibeb border",
+    "negative_prompt": "modern skyscrapers, neon lights, plastic clutter, distorted fingers, extra hands, text overlay, watermark, cartoon, anime, oversaturated CGI",
+    "character_sheet_refs": [
+      "assets/refs/character_sheet_cand_1.png",
+      "assets/refs/character_sheet_cand_2.png",
+      "assets/refs/character_sheet_cand_3.png"
+    ],
+    "golden_reference": "assets/refs/golden_reference.png"
+  },
+  "shots": [
+    {
+      "id": "shot_01",
+      "order": 1,
+      "duration_s": 7.5,
+      "shot_size": "extreme_wide",
+      "camera": "slow_drift",
+      "reason": "Establish the misty Ethiopian highlands at dawn to ground the story in place, stillness, and heritage.",
+      "keyframe": {
+        "prompt": "Empty misty green Ethiopian highland mountains at dawn, no people in foreground, golden sunbeams breaking over terraced valleys and distant thatched tukuls, morning woodsmoke rising gently",
+        "seed": 2001,
+        "negative_prompt": "modern skyscrapers, neon lights, text overlay, distorted horizon, foreground portrait",
+        "ref_images": [],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Slow gentle camera drift right as morning mist glides softly across highland ridges",
+        "seed": 3001,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "በኢትዮጵያ ደጋማ ተራሮች ላይ፣ ንጋቱ ከጉም ጋር ሲገለጥ፣ አንድ ጥንታዊ ድምፅ ይነሳል።",
+        "english_translation": "High in the Ethiopian mountains at dawn, an ancient wisdom awakens with the mist.",
+        "style_instruction": "calm, warm, unhurried, reflective",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "High in the Ethiopian mountains at dawn,",
+          "an ancient wisdom awakens with the mist."
+        ]
+      }
+    },
+    {
+      "id": "shot_02",
+      "order": 2,
+      "duration_s": 8.0,
+      "shot_size": "medium",
+      "camera": "push_in",
+      "reason": "Introduce Ato Bekele at his wooden loom, connecting manual craft to lived wisdom before stating the proverb.",
+      "keyframe": {
+        "prompt": "Ato Bekele seated at a traditional Ethiopian wooden pit loom inside a sunlit mud-and-timber workshop, weaving white cotton cloth while young Selam watches beside him",
+        "seed": 2002,
+        "negative_prompt": "extra fingers, distorted loom strings, modern factory, text overlay",
+        "ref_images": ["assets/refs/golden_reference.png"],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Gentle slow push-in toward the elder weaver as his hands guide the wooden shuttle steadily",
+        "seed": 3002,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "ሽማግሌው ሸማኔ አቶ በቀለ፣ ነጠላውን በእርጋታ እየሸመኑ፣ ለልጅ ልጃቸው ለሰላም እንዲህ ይላሉ።",
+        "english_translation": "Elder weaver Ato Bekele works his loom, speaking softly to young Selam.",
+        "style_instruction": "calm, warm, unhurried, grandfatherly",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "Elder weaver Ato Bekele works his loom,",
+          "speaking softly to young Selam."
+        ]
+      }
+    },
+    {
+      "id": "shot_03",
+      "order": 3,
+      "duration_s": 8.0,
+      "shot_size": "extreme_close",
+      "camera": "locked",
+      "reason": "Visually prove the fragility of a single thread so the proverb's metaphor feels physical and earned.",
+      "keyframe": {
+        "prompt": "Extreme macro close-up of weathered dark-skinned Ethiopian elder hands only, holding a single delicate white spun cotton thread taut against warm dark workshop timber, dusty sunbeam",
+        "seed": 2003,
+        "negative_prompt": "extra fingers, deformed hands, full body portrait, linen studio backdrop",
+        "ref_images": [],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Locked camera, dust motes drifting slowly through the sunbeam while the single thread trembles faintly",
+        "seed": 3003,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "ይህን አንድ የጥጥ ክር ተመልከቺ፤ በብቻው ሲሆን በትንሽ ንፋስ እንኳ በቀላሉ ይበጠሳል።",
+        "english_translation": "Look at this single cotton thread—alone, even a gentle breeze snaps it.",
+        "style_instruction": "thoughtful, intimate, measured",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "Look at this single cotton thread—",
+          "alone, even a gentle breeze snaps it."
+        ]
+      }
+    },
+    {
+      "id": "shot_04",
+      "order": 4,
+      "duration_s": 8.0,
+      "shot_size": "medium_close",
+      "camera": "pan_right",
+      "reason": "Show Selam listening closely and holding the spindle, bridging generational knowledge transfer.",
+      "keyframe": {
+        "prompt": "Tight medium close portrait of young Selam alone inside a warm mud-and-timber workshop, holding a wooden cotton spindle and looking thoughtfully toward a sunlit window",
+        "seed": 2014,
+        "negative_prompt": "modern clothes, headphones, distorted hands, extra fingers, studio linen sheet",
+        "ref_images": ["assets/refs/golden_reference.png"],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Subtle slow pan right as the young girl turns the wooden spindle gently in her hands",
+        "seed": 3004,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "ሰላም ክሩን በእጇ ይዛ አዳመጠች፤ ትንሽ ነገር እንዴት ትልቅ ኃይል ሊሆን ይችላል ብላ አሰበች።",
+        "english_translation": "Selam holds the thread and listens, wondering how fragility becomes strength.",
+        "style_instruction": "calm, warm, gentle curiosity",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "Selam holds the thread and listens,",
+          "wondering how fragility becomes strength."
+        ]
+      }
+    },
+    {
+      "id": "shot_05",
+      "order": 5,
+      "duration_s": 8.5,
+      "shot_size": "close",
+      "camera": "push_in",
+      "reason": "Introduce the morning jebena coffee ceremony as an everyday cultural emblem of community gathering.",
+      "keyframe": {
+        "prompt": "Close-up of a traditional Ethiopian spherical black clay jebena coffee pot with a tall slender neck and spout resting over glowing charcoal embers in a clay stove, beside small white ceramic cini cups on a woven tray, fragrant steam rising inside a warm earthen home",
+        "seed": 2015,
+        "negative_prompt": "espresso machine, plastic cups, electric stove, text overlay, people standing",
+        "ref_images": [],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Very slow push-in toward the clay jebena as thin wisps of coffee steam rise through warm light",
+        "seed": 3005,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "በጀበና የሚፈላው ቡና ሽታ ቤቱን ሲሞላው፣ ጎረቤቶች እንደ ልማዳቸው አንድ ላይ ይሰበሰባሉ።",
+        "english_translation": "As fresh jebena coffee fills the home, neighbors gather together as custom calls.",
+        "style_instruction": "warm, welcoming, unhurried",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "As fresh jebena coffee fills the home,",
+          "neighbors gather together as custom calls."
+        ]
+      }
+    },
+    {
+      "id": "shot_06",
+      "order": 6,
+      "duration_s": 8.5,
+      "shot_size": "wide",
+      "camera": "slow_drift",
+      "reason": "Shift from the quiet loom to shared collective labor in the village courtyard to embody unity in action.",
+      "keyframe": {
+        "prompt": "Wide sunlit view of Ethiopian villagers in traditional cotton attire working together to lift timber beams and prepare woven thatch in a highland courtyard",
+        "seed": 2006,
+        "negative_prompt": "modern trucks, steel cranes, cartoon faces, distorted limbs",
+        "ref_images": ["assets/refs/golden_reference.png"],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Slow lateral camera drift as neighbors coordinate together in warm morning sunlight",
+        "seed": 3006,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "በመንደሩ አደባባይ ሰዎች በጋራ ሲተባበሩ፣ ከባዱ ድንጋይና ረጅሙ ጉዞ ቀላል ይሆናሉ።",
+        "english_translation": "In the village courtyard, many hands turn heavy stones into shared ease.",
+        "style_instruction": "steady, grounded, hopeful",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "In the village courtyard, many hands",
+          "turn heavy stones into shared ease."
+        ]
+      }
+    },
+    {
+      "id": "shot_07",
+      "order": 7,
+      "duration_s": 8.5,
+      "shot_size": "insert",
+      "camera": "locked",
+      "reason": "Return to the loom's interlocking warp and weft at peak tension to deliver the central proverb directly.",
+      "keyframe": {
+        "prompt": "Macro insert close-up filling the entire frame with hundreds of taut white warp cotton threads interlocking tightly with colorful Ethiopian tibeb patterned weft on a wooden handloom, warm directional side light",
+        "seed": 2017,
+        "negative_prompt": "synthetic nylon, blurry fabric, text overlay, people standing, portrait",
+        "ref_images": [],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Locked camera as the wooden reed gently presses tightly woven threads together in rhythm",
+        "seed": 3007,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "አባቶቻችን ከጥንት ጀምሮ እንደተናገሩት፤ ድር ቢያብር አንበሳ ያስር።",
+        "english_translation": "As our ancestors taught from long ago: When spiderwebs unite, they tie a lion.",
+        "style_instruction": "clear, resonant, proud, unhurried emphasis on the proverb",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "As our ancestors taught from long ago:",
+          "When spiderwebs unite, they tie a lion."
+        ]
+      }
+    },
+    {
+      "id": "shot_08",
+      "order": 8,
+      "duration_s": 8.5,
+      "shot_size": "medium",
+      "camera": "pull_back",
+      "reason": "Reveal the finished white shemma cloth catching warm sunbeams, showing the tangible beauty of patient unity.",
+      "keyframe": {
+        "prompt": "Ato Bekele and young Selam outdoors in a highland earthen courtyard holding open a wide luminous handwoven white Ethiopian netela cotton shawl stretched between their outstretched hands, golden afternoon sun shining through the weave",
+        "seed": 2018,
+        "negative_prompt": "extra hands, distorted faces, roof tiles, modern bags, linen backdrop",
+        "ref_images": ["assets/refs/golden_reference.png"],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Gentle slow pull-back as the soft woven cotton cloth billows lightly in the highland breeze",
+        "seed": 3008,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "ብዙ ቀጫጭን ክሮች በትዕግሥት ሲዋሐዱ፣ የማይበጠስ ውብ ሸማና የማይናወጥ ማኅበረሰብ ይገነባሉ።",
+        "english_translation": "When fine threads weave with patience, they form unbreakable cloth and community.",
+        "style_instruction": "warm, lyrical, dignified",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "When fine threads weave with patience,",
+          "they form unbreakable cloth and community."
+        ]
+      }
+    },
+    {
+      "id": "shot_09",
+      "order": 9,
+      "duration_s": 8.5,
+      "shot_size": "wide",
+      "camera": "tilt_up",
+      "reason": "Leave educated viewers with a timeless emotional horizon linking ancestral craft to modern collective purpose.",
+      "keyframe": {
+        "prompt": "Wide golden sunset silhouette of Ato Bekele and young Selam walking along a highland ridge overlooking endless Ethiopian valleys glowing in warm amber twilight",
+        "seed": 2009,
+        "negative_prompt": "city lights, power towers, airplane, text overlay",
+        "ref_images": ["assets/refs/golden_reference.png"],
+        "model": "@cf/black-forest-labs/flux-2-klein-4b"
+      },
+      "motion": {
+        "prompt": "Slow gentle tilt-up from the winding highland path toward the glowing amber horizon sky",
+        "seed": 3009,
+        "model": "Wan-AI/Wan2.2-TI2V-5B",
+        "draft_resolution": "480p",
+        "final_resolution": "720p"
+      },
+      "narration": {
+        "text": "ዛሬም በየትኛውም ዓለም ብንሆን፣ አንድነታችን ትንሹን ጥረት ወደ ታላቅ ኃይል ይለውጠዋል።",
+        "english_translation": "Wherever we stand in the world today, unity turns small efforts into great strength.",
+        "style_instruction": "calm, inspiring, quiet pride, lingering pause at end",
+        "voice": "Charon",
+        "language": "am"
+      },
+      "music_cue": {
+        "start_s": 0.0,
+        "end_s": 74.0,
+        "caption": "Traditional Ethiopian acoustic score featuring warm plucked krar, airy washint bamboo flute, gentle masinko bowing, and soft kebero heartbeat, reflective tizita pentatonic mood, instrumental only",
+        "tempo_bpm": 76,
+        "key": "C major pentatonic",
+        "duration_s": 76.5,
+        "chosen_candidate_path": null,
+        "candidates": []
+      },
+      "subtitles": {
+        "srt_path": "subtitles/film.srt",
+        "lines": [
+          "Wherever we stand in the world today,",
+          "our unity turns small acts into strength."
+        ]
+      }
+    }
+  ],
+  "end_card": {
+    "text": "Made with AI",
+    "subtitle": "The Heritage Short — Amharic Narration & Traditional Score",
+    "duration_s": 2.5,
+    "path": "assets/endcard/endcard.png"
+  },
+  "assembly": {
+    "subtitle_safe_area": {
+      "vertical_margin_v": 160,
+      "horizontal_margin_v": 64,
+      "max_lines": 2,
+      "max_chars_per_line": 42
+    },
+    "transition": "cut",
+    "ken_burns_fallback": true
+  }
+}
