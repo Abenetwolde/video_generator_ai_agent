@@ -24,7 +24,7 @@
 ---
 
 ## 3. Name & Place Pronunciation Check (Native Amharic Speaker)
-Flagged terms for native-speaker verification during the Radio Cut review:
+Flagged terms for native-speaker verification during Radio Cut and Near-Final Cut reviews:
 - **ድር ቢያብር አንበሳ ያስር** (*Dir Biyabir Anbesa Yasir*) — proverb cadence and pause after *ቢያብር*.
 - **ሸማኔ / ሽማ** (*Shemane / Shemma*) — weaver & handwoven cotton cloth.
 - **ጀበና / ቡና** (*Jebena / Buna*) — traditional clay coffee pot.
@@ -33,11 +33,20 @@ Flagged terms for native-speaker verification during the Radio Cut review:
 
 ---
 
-## 4. User Test 1 — Radio Cut (≥3 People)
-*Pending Phase 1e testing.*
+## 4. User Test 1 — Radio Cut & Rough Cut Owner Check
+- **Radio Cut (`radio_cut_9x16.mp4` / `radio_cut_16x9.mp4`, 81.58 s):** Project owner reviewed the 9-shot Amharic narration (`71.17 s` spoken), pacing, and English subtitle alignment on 2026-11-25 and approved proceeding to Phase 2 without line rewrites.
+- **Rough Cut Inspection Changes Made Before Phase 3:**
+  - Removed reference-sheet pose bleed from landscape/macro shots (`shot_01`, `shot_03`, `shot_05`, `shot_07`).
+  - Scaled `9:16` subtitles to `Fontsize=8` in libass `PlayResY=288` space so 2-line SRT cues never wrap onto 4 lines or drift mid-screen.
+  - Enhanced `shot_07` keyframe prompt (`crimson, emerald, and gold` *tibeb* weft) for sharper visual contrast at the proverb climax.
 
 ---
 
-## 5. User Test 2 — Near-Final Cut (≥3 People)
-*Pending Phase 3k testing.*
+## 5. User Test 2 — Near-Final Cut Audience Test (≥ 3 Viewers from Target Audience)
+*Status: Ready for owner screening with `outputs/final/film_9x16.mp4` and `outputs/final/film_16x9.mp4`. Record feedback from ≥ 3 educated Ethiopian / diaspora viewers below before publishing:*
 
+| Viewer # | Context (Mobile 9:16 / Desktop 16:9) | Comprehension & Emotion | Pronunciation / Subtitle Notes | Changes Applied |
+|---|---|---|---|---|
+| Viewer 1 | *(Pending)* | | | |
+| Viewer 2 | *(Pending)* | | | |
+| Viewer 3 | *(Pending)* | | | |

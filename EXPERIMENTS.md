@@ -39,3 +39,23 @@ Each entry records **Hypothesis → Change → Result** backed by `runs.jsonl` l
 - **Hypothesis:** Passing pixel-space `MarginV=160` and `Fontsize=16` directly to FFmpeg's `subtitles` filter breaks `9:16` framing because libass defaults SRT coordinates to a `384x288` virtual canvas (`PlayResY=288`), placing subtitles mid-screen and blowing up font size; similarly, sizing end-card text from `height` overflows `1080px` width on `9:16`.
 - **Change:** Extracted preview frames at `t=55s` and `t=80s`, discovered the overflow visually, then scaled `MarginV`, `MarginL/R`, and `Fontsize` into libass `288`-height space (`Fontsize=10`, `MarginV=24` on `9:16`) and sized end-card text relative to `min(width, height)` in `pipeline/assemble.py`.
 - **Result:** Re-extracted `9:16` frames confirm crisp 2-line English subtitles inside the bottom mobile safe area and full, centered `"Made with AI"` end-card framing across both `9:16` and `16:9`.
+
+### Experiment 08 — Tuning `9:16` Subtitle Line Wrapping (`Fontsize=10` → `Fontsize=8`)
+- **Hypothesis:** Reducing `9:16` SRT `Fontsize` from `10` to `8` in libass `PlayResY=288` space will keep every 42-character line from wrapping onto a second line, keeping subtitles strictly `≤2` rendered lines on phone screens.
+- **Change:** Updated `font_size = 8` for `aspect == "9:16"` in `pipeline/assemble.py` and re-ran `make film`.
+- **Result:** Re-extracted frame `outputs/tmp_assembly/check_9x16_sub.png` at `t=55s` showed exact 2-line subtitle rendering (`"As our ancestors taught from long ago: / When spiderwebs unite, they tie a lion."`) cleanly positioned in the lower safe area.
+
+### Experiment 09 — Sidechain Ducking & Pre-AAC Loudnorm True-Peak Margin
+- **Hypothesis:** Setting `loudnorm` PCM target true peak to `-1.2 dBTP` instead of `-1.0 dBTP` compensates for lossy AAC encoding overshoot while `sidechaincompress` (`threshold=0.02, ratio=6, attack=300ms, release=1500ms`) keeps Amharic narration clear over the Tizita score.
+- **Change:** Set `pcm_tp = min(true_peak, -1.2)` in `pipeline/assemble.py` and measured final `film_9x16.mp4` with FFmpeg `loudnorm=I=-14:TP=-1:LRA=11:print_format=json`.
+- **Result:** Measured `input_i = -14.02 LUFS`, `input_tp = -1.15 dBTP` (strictly meeting `≈ -14 LUFS` and `≤ -1 dB` true peak).
+
+### Experiment 10 — Live Single-Shot Regeneration Cache Proof (`shot_07`)
+- **Hypothesis:** Modifying a single shot's `keyframe.prompt` in `storyboard.json` should invalidate ONLY that shot's keyframe hash and downstream motion clip hash, while leaving all other 8 keyframes, 8 motion clips, 9 TTS narrations, and 3 music candidates untouched.
+- **Change:** Updated `shot_07.keyframe.prompt` in `storyboard.json` (`"crimson, emerald, and gold Ethiopian tibeb patterned weft"`) and ran `make film`.
+- **Result:** Verified in stdout and `runs.jsonl`: `narration` hit `9/9` cache (`0` API calls), `keyframes` generated ONLY `shot_07` (`16,805 ms`, `shot_07_6528f7ae891f.png`, `8` cached), `shots` generated ONLY `shot_07` (`1,739 ms`, `shot_07_bc566b8fb9a3.mp4`, `8` cached), and `music` hit `3/3` cache.
+
+### Experiment 11 — Clean-Clone Reproducibility & Secret Hygiene Check
+- **Hypothesis:** Cloning the git repository into a fresh directory with only `.env` supplied will pass `make validate`, reproduce `shots`/`music`/`assemble` deterministically, and contain zero leaked secrets in tracked files or logs.
+- **Change:** Audited git-tracked files for secret patterns and ran a fresh clone test of `make validate` + pipeline stages.
+- **Result:** Zero secret matches across repo files and `runs.jsonl`; `make validate` and clean-clone pipeline stages executed cleanly without manual intervention.

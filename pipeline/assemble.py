@@ -321,7 +321,7 @@ def render_aspect_video(
     if aspect == "9:16":
         margin_v = max(24, int(round(int(safe["vertical_margin_v"]) * 288 / height)))
         margin_h = max(14, int(round(int(safe["horizontal_margin_v"]) * 384 / width)))
-        font_size = 10
+        font_size = 8
     else:
         margin_v = max(16, int(round(int(safe["vertical_margin_v"]) * 288 / (height * 2))))
         margin_h = max(12, int(round(int(safe["horizontal_margin_v"]) * 384 / width)))
@@ -404,6 +404,15 @@ def render_aspect_video(
 
     endcard_mp4 = TMP_DIR / f"endcard_{aspect.replace(':', 'x')}.mp4"
     ensure_endcard_video(storyboard, width, height, fps, endcard_mp4)
+    if aspect == "9:16":
+        endcard_png = ROOT_DIR / storyboard["end_card"]["path"]
+        endcard_png.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(
+            ["ffmpeg", "-y", "-ss", "1.0", "-i", str(endcard_mp4), "-vframes", "1", str(endcard_png)],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
     segment_mp4s.append(endcard_mp4)
 
     vlist = TMP_DIR / f"video_concat_{aspect.replace(':', 'x')}.txt"

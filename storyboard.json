@@ -309,7 +309,7 @@
       "camera": "locked",
       "reason": "Return to the loom's interlocking warp and weft at peak tension to deliver the central proverb directly.",
       "keyframe": {
-        "prompt": "Macro insert close-up filling the entire frame with hundreds of taut white warp cotton threads interlocking tightly with colorful Ethiopian tibeb patterned weft on a wooden handloom, warm directional side light",
+        "prompt": "Macro insert close-up filling the entire frame with hundreds of taut white warp cotton threads interlocking tightly with crimson, emerald, and gold Ethiopian tibeb patterned weft on a wooden handloom, warm directional side light",
         "seed": 2017,
         "negative_prompt": "synthetic nylon, blurry fabric, text overlay, people standing, portrait",
         "ref_images": [],

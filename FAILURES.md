@@ -15,7 +15,11 @@ Every real quota limit, model failure, timeout, fallback activation, and resolut
 - **Error:** Kernel status after 45s poll: unknown
 - **Action / Workaround:** Notebook pushed to Kaggle; local pipeline uses Ken Burns / Tizita fallback until outputs are downloaded to kaggle/outputs/.
 
-### [2026-11-25T12:10:34Z] Stage: `kaggle` — etdev12/heritage-short-wan22
+### [2026-11-25T16:16:25Z] Stage: `kaggle` — GPU Queue Hold (`acestep` & `wan22`)
+- **Error:** After phone verification on `etdev12`, both `etdev12/heritage-short-acestep` (v3) and `etdev12/heritage-short-wan22` (v2) remained in `status=queued` for >2 hours without GPU allocation.
+- **Action / Workaround:** Documented queue hold and shipped Phase 3 using verified local FFmpeg Ken Burns clips (`pipeline/shots.py`) and 3-candidate Tizita score (`pipeline/music.py`). Notebooks remain ready in `kaggle/` for optional GPU enhancement anytime a slot clears.
+
+### [2026-11-25T12:10:34Z] Stage: `kaggle` — etdev12/heritage-short-wan22 (v1)
 - **Error:** `Failed to resolve 'pypi.org'` during `pip install ftfy` + `FileNotFoundError: '/kaggle/input/heritage-short-inputs/storyboard.json'` (Kaggle mounts datasets at `/kaggle/input/datasets/<user>/<slug>/` or disables outbound internet on unverified accounts).
 - **Action / Workaround:** Updated [kaggle/wan22_i2v.ipynb](file:///home/ubuntu/Documents/AiMl/The/kaggle/wan22_i2v.ipynb) to locate `storyboard.json` via `Path('/kaggle/input').rglob('storyboard.json')`; local pipeline uses deterministic FFmpeg Ken Burns fallback (`pipeline/shots.py`) and synthesized Ethiopian Tizita score (`pipeline/music.py`).
 
@@ -66,3 +70,7 @@ Every real quota limit, model failure, timeout, fallback activation, and resolut
 ### [2026-11-25T13:58:41Z] Stage: `kaggle` — etdev12/heritage-short-wan22
 - **Error:** Kernel status after 90s poll: queued
 - **Action / Workaround:** Notebook pushed to Kaggle; local pipeline uses Ken Burns / Tizita fallback until outputs are downloaded to kaggle/outputs/.
+
+### [2026-11-25T16:21:40Z] Stage: `shots` — shot_07
+- **Error:** Kaggle Wan 2.2 clip not present locally (session/quota boundary).
+- **Action / Workaround:** Emitted deterministic FFmpeg Ken Burns fallback at outputs/shots/shot_07_bc566b8fb9a3.mp4.
